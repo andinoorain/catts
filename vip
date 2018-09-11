@@ -28,7 +28,7 @@ if [[ $getok == "OK" ]]
 fi
 rm info.tmp 2> /dev/null
 printf "${kuning}[!]${NC} Getting News ID.."
-getnews=$(curl -s 'http://www.newscat.com/api/article/list?page=72&category=vip' -m 60 | grep -Po '(?<="aid":")[^"]*' > aid.txt )
+getnews=$(curl -s 'http://www.newscat.com/api/article/list?page=77&category=vip' -m 60 | grep -Po '(?<="aid":")[^"]*' > aid.txt )
 getnewsok=$(cat aid.txt | sed -n 1p)
 	if [[ $getnewsok == '' ]]
 		then
